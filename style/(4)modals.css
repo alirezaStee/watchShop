@@ -1,0 +1,695 @@
+/*====================================================================================== style for  menu-modal ======================================================== */
+.menu-modal {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 99999999;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.menu-modalActive {
+  left: 0;
+}
+/* ==== searchbox ==== */
+.searchbox-in-menu-modal {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.divInputSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.menu-modal .noProductsFoundText {
+  width: 100%;
+  font-size: 16px;
+  text-align: start;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.divProductThatFoundInmenu-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.searchbox-in-menu-modal input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 60px;
+  font-weight: 600;
+}
+/* ==== menuBtn and categoriesBtn in modal==== */
+.ul-menuBtn-and-categoriesBtn {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.ul-menuBtn-and-categoriesBtn li {
+  text-align: center;
+  flex: 1;
+  border-bottom: 3px solid #9e9e9e;
+}
+
+.ul-menuBtn-and-categoriesBtn li a {
+  /* چون بعدش برای تگ ای افتر هستش */
+  position: relative;
+  /*  */
+  display: block;
+  padding: 15px 30px;
+  background-color: #f5f5f5;
+  color: #a79a90;
+}
+
+.ul-menuBtn-and-categoriesBtn li a:hover {
+  color: #000000;
+}
+
+.ul-menuBtn-and-categoriesBtn li a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-bule);
+  transition: 0.6s;
+}
+
+.ul-menuBtn-and-categoriesBtn li a:hover::after {
+  width: 100%;
+}
+
+.ul-menuBtn-and-categoriesBtn .activeBtnInMenuModalClass {
+  background-color: #e9e9e9;
+  color: #000000;
+}
+/* ==== when a have class active ==== */
+.ul-menuBtn-and-categoriesBtn li a.activeBtnInMenuModalClass::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-bule);
+  transition: 0.6s;
+}
+
+.ul-menuBtn-and-categoriesBtn li .aTagMenuBtn::after,
+.ul-menuBtn-and-categoriesBtn li .aTagMenuBtn.active::after,
+.ul-menuBtn-and-categoriesBtn li .aTagMenuBtn:hover::after {
+  right: 0;
+  left: auto;
+}
+
+.ul-menuBtn-and-categoriesBtn li .aTagCategoriesBtn::after,
+.ul-menuBtn-and-categoriesBtn li .aTagCategoriesBtn.active::after,
+.ul-menuBtn-and-categoriesBtn li .aTagCategoriesBtn:hover::after {
+  left: 0;
+}
+/* ==== when page loaded categoriesItems dont show ==== */
+.categoriesItemsInMenuModul {
+  display: none;
+}
+
+.menuItemsInMenuModul,
+.categoriesItemsInMenuModul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItemsInMenuModul li a,
+.categoriesItemsInMenuModul li a {
+  display: block;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.menuItemsInMenuModul li a:hover,
+.categoriesItemsInMenuModul li a:hover {
+  color: var(--color-bule);
+}
+
+.menuItemsInMenuModul li a i {
+  padding-right: 5px;
+}
+
+/* ================================style for backgroundDarkDivWhenModulsOpean=========================== */
+.backgroundDarkDivWhenModulsOpean {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 44444444;
+  transition: 0.3s;
+}
+
+.backgroundDarkDivWhenModulsOpeanActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ====================================================================================== style for shoppingCardModul======================================================== */
+
+.shoppingCardModul {
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingCardModulActive {
+  right: 0px;
+}
+
+.topof-shoppingCardModul {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.topof-shoppingCardModul h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.topof-shoppingCardModul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.bottom-shoppingCardModul {
+  height: 100%;
+}
+
+.emty-shoppingCardModul {
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.emty-shoppingCardModul i {
+  font-size: 95px;
+  color: #e6e6e6;
+}
+
+.emty-shoppingCardModul p {
+  font-size: 16px;
+}
+
+.full-shoppingCardModul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ==== style for full-shoppinCardModulBody ==== */
+.full-shoppinCardModulBody {
+  position: relative;
+  flex: 90%;
+  overflow: auto;
+}
+/* ==== style for shopping card item in shopping card modal==== */
+.shoppingCardItemInshoppingModul {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  transition: 0.25s;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.shoppingCardItemInshoppingModul:hover {
+  background-color: #f9f9f9;
+}
+
+.shoppingCardItemInshoppingModul .deletShoppingCard {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgb(154, 154, 154);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.shoppingCardItemInshoppingModul .deletShoppingCard:hover {
+  background-color: white;
+}
+.shoppingCardItemInshoppingModul img {
+  max-width: 65px;
+  max-height: 65px;
+  margin-right: 10px;
+}
+.about-shoppingCardItemInshoppingModul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-shoppingCardItemInshoppingModul > div {
+  padding: 5px 0;
+}
+
+.name-shoppingCardItemInshoppingModul {
+  font-weight: bold;
+}
+
+.quantity {
+  display: flex;
+}
+
+.quantity input[type="number"]::-webkit-inner-spin-button,
+.quantity input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity input,
+.quantity button {
+  font-size: 14px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #e6e6e6;
+  color: #646464;
+}
+
+.quantity .btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  min-width: 25px;
+  height: 32px;
+  color: #a6a6a6;
+  border: 1px solid #e6e6e6;
+  transition: 0.25s;
+}
+
+.quantity input {
+  border-right: none;
+  border-left: none;
+  outline: none;
+  width: 30px;
+}
+
+.quantity .btn:hover {
+  background-color: #5797b2;
+  color: white;
+}
+
+.aboutTotallPriceFor-shoppingCardItemInshoppingModul {
+  font-size: 12px;
+  color: rgb(154, 154, 154);
+}
+
+.price-shoppingCardItemInshoppingModul {
+  font-weight: bold;
+  color: #5797b2;
+}
+
+/* ==== style for full-shoppinCardModulFooter ==== */
+.full-shoppinCardModulFooter {
+  flex: 10%;
+  padding-bottom: 15px;
+}
+
+.DivTotallPriceInShoppingCardModul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  font-size: 18px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+.TotallPriceInShoppinCardModul {
+  color: #5797b2;
+}
+
+.divBtnCheckoutInShoppingModul {
+  padding: 10px;
+}
+
+.btnCheckoutInShoppingModul {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #5797b2;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* ====================================================================================== style for modalSearch ======================================================== */
+.modalSearch {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 14px rgb(0 0 0 / 8%);
+  text-align: center;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99999;
+  height: 0;
+}
+
+.modalSearchActive {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  bottom: -60px;
+}
+
+/* .modalSearch span {
+  position: absolute;
+} */
+
+.modalSearch form {
+  padding: 30px 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  text-align: center;
+}
+
+.modalSearch input {
+  padding: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 44px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+
+.closeModulSearchBtn {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  z-index: 1;
+}
+
+.closeModulSearchBtn i {
+  display: block;
+  font-size: 60px;
+}
+
+.modalSearch input::placeholder {
+  color: #333;
+}
+/* ==== style for productThatFoundItem in modal search and boxsearch in menu  modal==== */
+.noProductsFoundText {
+  display: none;
+}
+
+.productThatFoundItem {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  flex: 100%;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.productThatFoundItem img {
+  max-width: 45px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.name-productThatFoundItem {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.price-productThatFoundItem {
+  color: #5797b2;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .DivProductThatFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .productThatFoundItem {
+    flex: unset;
+    width: unset;
+    flex-basis: 200px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .productThatFoundItem img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .name-productThatFoundItem {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .price-productThatFoundItem {
+    color: #5797b2;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+/* ====================================================================================== style for modalImg======================================================== */
+.modalImg {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modalImg img {
+  height: auto;
+  max-width: 100%;
+}
+
+.modalImgclose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.modalImgAlt {
+  margin-top: 10px;
+  color: #f1f1f1;
+}
+
+/* ====================================================================================== style for modal quick veiw======================================================== */
+.modalQuickViewCard {
+  position: fixed;
+  z-index: 99999999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.quickViewCard {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0px;
+  width: 950%;
+  max-width: 930px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.quickViewCard > div {
+  flex: 100%;
+}
+
+.quickViewCard img {
+  width: 100%;
+  height: auto;
+}
+
+.closeQuickViewCard {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+@media (min-width: 768px) {
+  .quickViewCard > div {
+    flex: 50%;
+  }
+
+  .quickViewCard {
+    padding: 0px;
+  }
+
+  .information-QuickViewCard {
+    padding: 20px;
+  }
+
+  .divImg-QuickViewCard .viewDetails-QuickViewCard {
+    bottom: -50px;
+  }
+
+  .divImg-QuickViewCard:hover .viewDetails-QuickViewCard {
+    bottom: 0px;
+  }
+}
+
+.price-QuickViewCard {
+  color: #5797b2;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.name-QuickViewCard {
+  font-size: 26px;
+}
+
+.about-QuickViewCard {
+  font-size: 14px;
+  color: #777777;
+  line-height: 170%;
+}
+
+.information-QuickViewCard {
+  box-sizing: border-box;
+  padding: 20px 15px 20px 15px;
+}
+
+.btns-QuickViewCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.btns-QuickViewCard > a {
+  background-color: #5797b2;
+  color: white;
+  box-sizing: border-box;
+  margin-left: 10px;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 9.25px 24px;
+}
+
+.category-QuickViewCard {
+  color: #777777;
+  font-size: 14px;
+}
+
+.category-QuickViewCard a {
+  color: #b0b0b0;
+}
+
+.viewDetails-QuickViewCard {
+  position: absolute;
+  background-color: #5797b2;
+  color: white;
+  left: 0;
+  width: 100%;
+  bottom: 0px;
+  font-size: 16px;
+  padding: 15px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+.viewDetails-QuickViewCard:visited {
+  color: white;
+}
+
+.divImg-QuickViewCard {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}

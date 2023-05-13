@@ -1,0 +1,345 @@
+/* ====================================================================================== style for bestproduct ======================================================== */
+.bestProductInMainPage {
+  position: relative;
+  background: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+  .bestProductInMainPage {
+    background: #f8f8f8
+      url(https://woodmart.xtemos.com/wp-content/uploads/2017/07/best-sellers.svg?id=10998);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.bestProductInMainPage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bestProductInMainPage h2 {
+  text-align: left;
+}
+
+.bestProductInMainPage p {
+  text-align: left;
+  font-size: 15px;
+  line-height: 160%;
+  color: #777777;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.capabilityForBestProductItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capabilityForBestProductItems > div svg path {
+  color: #5797b2;
+}
+
+.capabilityForBestProductItems > h5 {
+  text-align: start;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.btnForBestProduct {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.btnForBestProduct button {
+  color: white;
+  background-color: #5797b2;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px 28px;
+  min-height: 48px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.btnForBestProduct button:hover {
+  background-color: #42819c;
+}
+
+.btnForBestProduct button:last-child {
+  color: black;
+  border: 2px solid #e6e6e6;
+  background-color: transparent;
+}
+
+.btnForBestProduct button:last-child:hover {
+  background-color: #e6e6e6;
+}
+
+.capabilityForBestProductItemsDnone {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .capabilityForBestProductItemsDnone {
+    display: flex;
+  }
+}
+/* ====================================================================================== style for gallery ======================================================== */
+.gallery {
+  padding: 50px 0;
+}
+
+.gallery h2 {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.galleryDivImg div {
+  padding: 2px;
+}
+
+.galleryDivImg div img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+/* ====================================================================================== style for magazinePart======================================================== */
+.swiper2 {
+  padding: 0 20px;
+}
+.swiper-slide {
+  background: none;
+}
+.magazinePart {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.magazinePart h2 {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.imgMagazine {
+  position: relative;
+}
+
+.magazinePart .imgMagazine:hover {
+  transform: none !important;
+}
+
+.dateMagazinPablished {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  min-width: 52px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.dateMagazinPablished-day {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.dateMagazinPablished-mon {
+  font-size: 16px;
+}
+
+.divAboutMagazine {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainDivAboutMagazine {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.topOfDivAboutMagazine {
+  position: absolute;
+  top: -13px;
+  right: 15px;
+  left: 15px;
+  overflow: hidden;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  color: white;
+  background-color: #5797b2;
+  font-weight: bold;
+}
+.magazineSlider .swiper-slide .row {
+  align-items: center;
+  justify-content: right;
+  padding: 12px;
+}
+
+.magazineSlider .col-12 {
+  padding: 0;
+}
+
+.mainDivAboutMagazine {
+  padding: 25px 15px;
+  z-index: 3;
+  background-color: white;
+  margin-left: 0px;
+}
+
+.mainDivAboutMagazine h5 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mainDivAboutMagazine p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.continueReading {
+  font-size: 13px;
+  color: #42819c;
+  font-weight: bold;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continueReading::after {
+  content: " . . .";
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 5px;
+  transition: 0.25s;
+}
+
+.continueReading:hover::after {
+  opacity: 1;
+  visibility: visible;
+  animation-name: moveDot;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes moveDot {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(3px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.aboutWriterMagazin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.aboutWriterMagazin .pictureMagazinWriter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.nameMagazinWriter {
+  font-size: 12px;
+  padding: 0 5px;
+  color: #a6a6a6;
+}
+
+.commentsMagazin {
+  font-size: 14px;
+  padding-left: 5px;
+  position: relative;
+}
+
+.teedadCommentsMagazin {
+  position: absolute;
+  top: -6px;
+  inset-inline-end: -9px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #167fac;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 15px;
+}
+
+@media (min-width: 768px) {
+  .mainDivAboutMagazine {
+    margin-left: -10px;
+  }
+}
+/* ====================================================================================== style for instagramPosts======================================================== */
+.instagramPosts .swiper3 .swiper-slide:hover .divAboutInstaPost {
+  visibility: visible;
+  opacity: 1;
+}
+
+.instagramPosts .swiper3 .swiper-slide:hover .divAboutInstaPost > div {
+  transform: translateY(0px);
+}
+
+.divAboutInstaPost {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.divAboutInstaPost > div {
+  display: none;
+  transition: 0.25s;
+  transform: translateY(50px);
+}
+
+@media (min-width: 640px) {
+  .divAboutInstaPost > div {
+    display: block;
+  }
+}

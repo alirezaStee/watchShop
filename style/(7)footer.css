@@ -1,0 +1,117 @@
+/* ================================footer=========================== */
+footer {
+  font-family: "Open Sans", sans-serif;
+  padding: 40px 0 20px 0;
+}
+
+.foot1 {
+  line-height: 130%;
+}
+
+.foot1 > div {
+  text-align: left;
+}
+
+.foot1 p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.foot1 .teleNumberDiv {
+  font-size: 14px;
+  color: #777777;
+}
+
+.foot1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.foot1 ul li:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.foot1 ul li {
+  font-size: 14px;
+  text-align: left;
+}
+
+.foot1 ul li a {
+  color: #777777;
+}
+
+.recentPostsLi {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #777777;
+  padding: 10px 0;
+}
+
+.recentPostsUl li {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.recentPostsUl li:last-child,
+.recentPostsUl li:first-child {
+  border: none;
+}
+
+.recent-posts-info {
+  margin-left: 10px;
+}
+
+.recentPostsLi .wd-entities-title a {
+  color: black;
+  font-size: 14px;
+}
+
+.recent-posts-time {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.recent-posts-comment {
+  font-size: 12px;
+}
+
+.foot2 {
+  text-align: center;
+  font-size: 12px;
+  color: #777777;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.btnScrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.922);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  z-index: 20;
+  transform: translateX(200px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+}
+.btnScrollToTopActive {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
