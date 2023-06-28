@@ -304,6 +304,11 @@
   }
 }
 /* ====================================================================================== style for instagramPosts======================================================== */
+.placeToAddInstagramPost > a{
+  display: flex;
+  
+}
+
 .instagramPosts .swiper3 .swiper-slide:hover .divAboutInstaPost {
   visibility: visible;
   opacity: 1;
@@ -319,7 +324,7 @@
   bottom:0;
   left: 0;
   right: 0;
-  display: flex;
+  display: flex ;
   align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
