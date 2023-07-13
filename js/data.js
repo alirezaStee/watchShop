@@ -17,7 +17,7 @@ let allData = {
         ],
         h2: "Swiss-made stylish brand blue watches.",
         p: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus porro similique labore praesentium.",
-        bgPrimery: "rgb(42, 41, 41)",
+        bgPrimery: "black",
         bgsecondery:
           "linear-gradient(90deg, rgba(247, 247, 247, 1) 50%, rgb(42, 41, 41) 50%)",
       },
@@ -68,7 +68,7 @@ let allData = {
           "img/products/watch-slide-1-6.png",
         ],
         h2: "Swiss-made stylish brand blue watches.",
-        p: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus porro similique labore praesentium.",
+        p: "Lorem ipsum dolor sit amet,kdjfgh dfhghkjv jskhgfkj kjhfgkgndb .",
         bgPrimery: "#9fc0d3",
         bgsecondery:
           "linear-gradient(90deg, rgba(247, 247, 247, 1) 50%, #9fc0d3 50%)",

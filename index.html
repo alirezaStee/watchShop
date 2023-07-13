@@ -1,309 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11111</title>
+    <link rel="icon" type="image/x-icon" href="img/flavicon.png" />
+    <!-- link for local -->
+    <link rel="stylesheet" href="style/(1)Normalize.css" />
+    <link rel="stylesheet" href="style/(2)gridSystem.css" />
+    <link rel="stylesheet" href="style/(3)navbar.css" />
+    <link rel="stylesheet" href="style/(4)modals.css" />
+    <link rel="stylesheet" href="style/(5)main(1).css" />
+    <link rel="stylesheet" href="style/(6)main(2).css" />
+    <link rel="stylesheet" href="style/(7)footer.css" />
+    <!-- link for icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- link for googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link for animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>11111</title>
-  <link rel="icon" type="image/x-icon" href="img/flavicon.png">
-  <!-- link for local -->
-  <link rel="stylesheet" href="style/(1)Normalize.css">
-  <link rel="stylesheet" href="style/(2)gridSystem.css">
-  <link rel="stylesheet" href="style/(3)navbar.css">
-  <link rel="stylesheet" href="style/(4)modals.css">
-  <link rel="stylesheet" href="style/(5)main(1).css">
-  <link rel="stylesheet" href="style/(6)main(2).css">
-  <link rel="stylesheet" href="style/(7)footer.css">
-  <!-- link for icon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <!-- link for googlefonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300;400&display=swap"
-    rel="stylesheet">
-  <!-- link for animation -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+      :root {
+        --animate-delay: 0.12s;
+        --swiper-pagination-color: black;
+        --swiper-pagination-bullet-width: 10px;
+        --swiper-pagination-bullet-height: 10px;
+        --swiper-pagination-bullet-size: 10px;
+        --swiper-navigation-color: #454545;
+        --swiper-navigation-size: 33px;
+        --color-bule: #5797b2;
+      }
 
-  <style>
-    :root {
-      --animate-delay: 0.12s;
-      --swiper-pagination-color: black;
-      --swiper-pagination-bullet-width: 10px;
-      --swiper-pagination-bullet-height: 10px;
-      --swiper-pagination-bullet-size: 10px;
-      --swiper-navigation-color: #454545;
-      --swiper-navigation-size: 33px;
-      --color-bule: #5797b2;
-    }
+      body {
+        font-size: 24px;
+        font-family: "Open Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
 
-    body {
-      font-size: 24px;
-      font-family: 'Open Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
+      body::-webkit-scrollbar {
+        display: none;
+      }
 
-    body::-webkit-scrollbar {
-      display: none;
-    }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      body {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    body {
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-    }
+      .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+      }
 
-    .stop-scrolling {
-      height: 100%;
-      overflow: hidden;
-    }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
 
-    a {
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- 1 -->
-  <header>
-
-    <nav class="navbar">
-      <div class="container">
-
-        <a class="navbar-logo-btn" href="#">
-          <img class="navbar-logo" src="img/wood-logo-dark.svg" alt="">
-        </a>
-
-        <ul class="navbar-ul-links navbar-main-links">
-          <li class="display-for-lg-nvbar">
-            <a class="navbar-menu-icon-btn" href="#!"><i class="bi bi-list"></i><span>MENU</span></a>
-          </li>
-          <li class="display-for-md-nvbar">
-            <a href="index.html">home</a>
-          </li>
-          <li class="display-for-md-nvbar">
-            <a href="">shop</a>
-          </li>
-          <li class="display-for-md-nvbar">
-            <a href="">blog</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-ul-links">
-          <li class="display-for-md-nvbar">
-            <a href="#!">login/register</a>
-          </li>
-          <li class="display-for-md-nvbar">
-            <a href="#!" class="navbar-search-btn"><i class="bi bi-search navbar-search-icon"></i></a>
-          </li>
-          <li class="display-for-md-nvbar">
-            <a href="wishlist.html"><i class="bi bi-heart"></i></a>
-          </li>
-          <li>
-            <a class="navbar-shopbasket-btn" href="#!">
-              <i class="bi bi-cart2 navbar-shopbasket-icon">
-                <div class="navbar-number-of-product"></div>
-              </i>
-              <div class="navbar-totall-price">$140.00</div>
-            </a>
-          </li>
-        </ul>
-
+  <body>
+    <div class="loginModal">
+      <div class="topof-loginModul">
+        <h3>Sigh in</h3>
+        <a href="#!" class="closeloginModalBtn" rel="nofollow"
+          ><i class="bi bi-x"></i> Close</a
+        >
       </div>
-    </nav>
-  </header>
-
-  <!-- 2 -->
-  <div class="menu-modal">
-    <div class="searchbox-in-menu-modal">
-      <div class="divInputSearch">
-        <input type="text" placeholder="Search for products" class="inputSearchInmenu-modal">
-        <i class="bi bi-search"></i>
+      <div class="bottom-loginModul">
+        <form action="">
+          <label for=""
+            >Username or email address <span class="required">*</span></label
+          >
+          <input type="text" required />
+          <label for="">Password <span class="required">*</span></label>
+          <input type="text" required />
+          <button type="submit">LOG IN</button>
+          <div class="loginModal-footer-of-form">
+            <div><input type="checkbox" />Remember me</div>
+            <a href="#" class="lost-password-btn-liginModal"
+              >Lost your password?</a
+            >
+          </div>
+        </form>
+        <div class="box-no-account-sighmodal">
+          <i class="bi bi-person"></i>
+          <h5>No account yet?</h5>
+          <a href="">CREAT AN ACCOUNT</a>
+        </div>
       </div>
-      <div class="noProductsFoundText">No products found</div>
-      <div class="divProductThatFoundInmenu-modal">
-        <!-- <div class="productThatFoundItem">
+    </div>
+
+    <!-- 1 -->
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-logo-btn" href="#">
+            <img class="navbar-logo" src="img/wood-logo-dark.svg" alt="" />
+          </a>
+
+          <ul class="navbar-ul-links navbar-main-links">
+            <li class="display-for-lg-nvbar">
+              <a class="navbar-menu-icon-btn" href="#!"
+                ><i class="bi bi-list"></i><span>MENU</span></a
+              >
+            </li>
+            <li class="display-for-md-nvbar">
+              <a href="index.html">home</a>
+            </li>
+            <li class="display-for-md-nvbar">
+              <a href="">shop</a>
+            </li>
+            <li class="display-for-md-nvbar">
+              <a href="">blog</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-ul-links">
+            <li class="display-for-md-nvbar">
+              <a href="#!" class="navbar-login-btn">login/register</a>
+            </li>
+            <li class="display-for-md-nvbar">
+              <a href="#!" class="navbar-search-btn"
+                ><i class="bi bi-search navbar-search-icon"></i
+              ></a>
+            </li>
+            <li class="display-for-md-nvbar">
+              <a href=""><i class="bi bi-heart"></i></a>
+            </li>
+            <li>
+              <a class="navbar-shopbasket-btn" href="#!">
+                <i class="bi bi-cart2 navbar-shopbasket-icon">
+                  <div class="navbar-number-of-product"></div>
+                </i>
+                <div class="navbar-totall-price">$140.00</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 2 -->
+    <div class="menu-modal">
+      <div class="searchbox-in-menu-modal">
+        <div class="divInputSearch">
+          <input
+            type="text"
+            placeholder="Search for products"
+            class="inputSearchInmenu-modal"
+          />
+          <i class="bi bi-search"></i>
+        </div>
+        <div class="noProductsFoundText">No products found</div>
+        <div class="divProductThatFoundInmenu-modal">
+          <!-- <div class="productThatFoundItem">
           <img src="img/products/product-watch-3.jpg" alt="">
           <div>
             <div class="name-productThatFoundItem">moon dhjgf</div>
           <div class="price-productThatFoundItem">140.00$</div>
           </div>
         </div> -->
+        </div>
       </div>
+
+      <ul class="ul-menuBtn-and-categoriesBtn">
+        <li>
+          <a
+            href="#!"
+            class="aTagMenuBtn mainBtnInMenuModal activeBtnInMenuModalClass"
+            >MENU</a
+          >
+        </li>
+        <li>
+          <a href="#!" class="aTagCategoriesBtn mainBtnInMenuModal"
+            >CATEGORIES</a
+          >
+        </li>
+      </ul>
+
+      <ul class="menuItemsInMenuModul">
+        <li><a href="index.html">home</a></li>
+        <li><a href="">shop</a></li>
+        <li><a href="">blig</a></li>
+        <li>
+          <a href=""><i class="bi bi-heart"></i>wishlist</a>
+        </li>
+        <li>
+          <a href=""><i class="bi bi-person"></i>login/register</a>
+        </li>
+      </ul>
+
+      <ul class="categoriesItemsInMenuModul">
+        <li><a href="">Watches</a></li>
+        <li><a href="">Accessories</a></li>
+        <li><a href="">Clocks</a></li>
+        <li><a href="">Lighting</a></li>
+      </ul>
     </div>
 
-    <ul class="ul-menuBtn-and-categoriesBtn">
-      <li><a href="#!" class="aTagMenuBtn mainBtnInMenuModal activeBtnInMenuModalClass">MENU</a></li>
-      <li><a href="#!" class="aTagCategoriesBtn mainBtnInMenuModal">CATEGORIES</a></li>
-    </ul>
+    <!-- 3 -->
+    <div class="backgroundDarkDivWhenModulsOpean"></div>
 
-    <ul class="menuItemsInMenuModul">
-      <li><a href="index.html">home</a></li>
-      <li><a href="">shop</a></li>
-      <li><a href="">blig</a></li>
-      <li><a href="wishlist.html"><i class="bi bi-heart"></i>wishlist</a></li>
-      <li><a href=""><i class="bi bi-person"></i>login/register</a></li>
-    </ul>
-
-    <ul class="categoriesItemsInMenuModul">
-      <li><a href="">Watches</a></li>
-      <li><a href="">Accessories</a></li>
-      <li><a href="">Clocks</a></li>
-      <li><a href="">Lighting</a></li>
-    </ul>
-
-  </div>
-
-  <!-- 3 -->
-  <div class="backgroundDarkDivWhenModulsOpean"></div>
-
-  <!-- 4 -->
-  <div class="shoppingCardModul">
-    <div class="topof-shoppingCardModul">
-      <h3>Shopping Card</h3>
-      <a href="#!" class="closeShopCardModulBtn" rel="nofollow"><i class="bi bi-x"></i> Close</a>
-    </div>
-    <div class="bottom-shoppingCardModul">
-      <div class="emty-shoppingCardModul">
-        <i class="bi bi-cart-x"></i>
-        <p>No products in the cart.</p>
+    <!-- 4 -->
+    <div class="shoppingCardModul">
+      <div class="topof-shoppingCardModul">
+        <h3>Shopping Card</h3>
+        <a href="#!" class="closeShopCardModulBtn" rel="nofollow"
+          ><i class="bi bi-x"></i> Close</a
+        >
       </div>
-      <div class="full-shoppingCardModul">
-        <div class="full-shoppinCardModulBody">
-          <a href="#" class="shoppingCardItemInshoppingModul">
-            <span class="deletShoppingCard">×</span>
-            <div>
-              <img src="img/products/product-watch-4.jpg" alt="">
-            </div>
-            <div class="about-shoppingCardItemInshoppingModul">
-              <div class="name-shoppingCardItemInshoppingModul">mngdkfj djfkhh</div>
-              <div class="quantity">
-                <button class="btn minus1">-</button>
-                <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number">
-                <button class="btn add1">+</button>
-              </div>
-              <div class="aboutTotallPriceFor-shoppingCardItemInshoppingModul">
-                <span class="count-shoppingCardItemInshoppingModul">1</span><span>× </span><span
-                  class="price-shoppingCardItemInshoppingModul">$140.00</span>
-              </div>
+      <div class="bottom-shoppingCardModul">
+        <div class="emty-shoppingCardModul">
+          <i class="bi bi-cart-x"></i>
+          <p>No products in the cart.</p>
+        </div>
+        <div class="full-shoppingCardModul">
+          <div class="full-shoppinCardModulBody">
+            <!-- <a href="#" class="shoppingCardItemInshoppingModul">
+              <span class="deletShoppingCard">×</span>
               <div>
+                <img src="img/products/product-watch-4.jpg" alt="" />
               </div>
-            </div>
-          </a>
-
-        </div>
-        <div class="full-shoppinCardModulFooter">
-          <div class="DivTotallPriceInShoppingCardModul">
-            <span><strong>Subtotal:</strong></span>
-            <span class="TotallPriceInShoppinCardModul"></span>
+              <div class="about-shoppingCardItemInshoppingModul">
+                <div class="name-shoppingCardItemInshoppingModul">
+                  mngdkfj djfkhh
+                </div>
+                <div class="quantity">
+                  <button class="btn minus1">-</button>
+                  <input
+                    class="quantity"
+                    id="id_form-0-quantity"
+                    min="0"
+                    name="form-0-quantity"
+                    value="1"
+                    type="number"
+                  />
+                  <button class="btn add1">+</button>
+                </div>
+                <div
+                  class="aboutTotallPriceFor-shoppingCardItemInshoppingModul"
+                >
+                  <span class="count-shoppingCardItemInshoppingModul">1</span
+                  ><span>× </span
+                  ><span class="price-shoppingCardItemInshoppingModul"
+                    >$140.00</span
+                  >
+                </div>
+                <div></div>
+              </div>
+            </a> -->
           </div>
-          <div class="divBtnCheckoutInShoppingModul">
-            <button class="btnCheckoutInShoppingModul">Checkout</button>
+          <div class="full-shoppinCardModulFooter">
+            <div class="DivTotallPriceInShoppingCardModul">
+              <span><strong>Subtotal:</strong></span>
+              <span class="TotallPriceInShoppinCardModul"></span>
+            </div>
+            <div class="divBtnCheckoutInShoppingModul">
+              <button class="btnCheckoutInShoppingModul">Checkout</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- 5 -->
-  <div class="modalSearch">
-    <a href="#!" class="closeModulSearchBtn"><i class="bi bi-x"></i></a>
-    <form action="">
-      <input type="text" placeholder="Search for products" class="inputSearchForProducts">
-    </form>
-    <div class="StartTypingToSeeText">Start typing to see products you are looking for.</div>
-    <div class="noProductsFoundText">No products found</div>
-    <div class="DivProductThatFound">
-      <!-- <div class="productThatFoundItem">
+    <!-- 5 -->
+    <div class="modalSearch">
+      <a href="#!" class="closeModulSearchBtn"><i class="bi bi-x"></i></a>
+      <form action="">
+        <input
+          type="text"
+          placeholder="Search for products"
+          class="inputSearchForProducts"
+        />
+      </form>
+      <div class="StartTypingToSeeText">
+        Start typing to see products you are looking for.
+      </div>
+      <div class="noProductsFoundText">No products found</div>
+      <div class="DivProductThatFound">
+        <!-- <div class="productThatFoundItem">
         <img src="img/products/product-watch-3.jpg" alt="">
         <div class="name-productThatFoundItem">moon dhjgf</div>
         <div class="price-productThatFoundItem">140.00$</div>
       </div> -->
-    </div>
-  </div>
-  <!-- 6 -->
-  <div class="modalImg">
-    <span class="modalImgclose">&times;</span>
-    <img class="modalImgPlaceToAddImg">
-    <span class="modalImgAlt"></span>
-  </div>
-  <!-- 7 -->
-  <main>
-    <!-- 7.0 -->
-    <div class="slider">
-      <div class="container placeToAddMainSlide">
-        <!-- <a href="#" class="slide">
-          <div class="div-about-watch-in-slide">
-            <h2 class=" animate__animated animate__fadeInUpBig ">Swiss-made stylish<br> brand <b>blue watches.</b></h2>
-            <p class="animate__animated animate__fadeInUpBig animate__delay-2s">Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit.
-              Accusamus porro similique labore praesentium.
-            </p>
-            <div class="slide-price animate__animated animate__fadeInUpBig animate__delay-3s">
-              <button>ADD TO CARD</button>
-              <div>190.00$</div>
-            </div>
-          </div>
-          <div class="div-img-in-slider">
-            <img class="animate__animated animate__fadeInRight" src="img/products/watch-slide-1-2-1.png" alt="">
-            <img class="animate__animated animate__fadeInRight" src="img/products/watch-slide-1-6.png" alt="">
-            <img class="animate__animated animate__fadeInRight" src="img/products/watch-slide-1-7.png" alt="">
-          </div>
-        </a> -->
       </div>
     </div>
-
-    <!-- 7.1 -->
-    <div class="categoriesSlider">
-      <div class="swiper mySwiper swiper1">
-        <div class="swiper-wrapper">
-          <a href="#!" class="swiper-slide">
-            <img src="/img/watch-cat-3.jpg" alt="">
-            <div class="category-infomation">
-              <h3>watch</h3>
-              <h4>5 product</h4>
+    <!-- 6 -->
+    <div class="modalImg">
+      <span class="modalImgclose">&times;</span>
+      <img class="modalImgPlaceToAddImg" />
+      <span class="modalImgAlt"></span>
+    </div>
+    <!-- 7 -->
+    <main>
+      <!-- 7.0 -->
+      <div class="slider">
+          <div class="swiper5">
+            <div class="swiper-wrapper placeToAddMainSlide">
+              <!-- <a href="#" class="slide swiper-slide">
+                <div class="container">
+                  <div class="div-about-watch-in-slide">
+                    <h2 class="animate__animated animate__fadeInUpBig">
+                      Swiss-made stylish<br />
+                      brand <b>blue watches.</b>
+                    </h2>
+                    <p
+                      class="animate__animated animate__fadeInUpBig animate__delay-2s"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Accusamus porro similique labore praesentium.
+                    </p>
+                    <div
+                      class="slide-price animate__animated animate__fadeInUpBig animate__delay-3s"
+                    >
+                      <button>ADD TO CARD</button>
+                      <div>190.00$</div>
+                    </div>
+                  </div>
+                  <div class="div-img-in-slider">
+                    <img
+                      class="animate__animated animate__fadeInRight"
+                      src="img/products/watch-slide-1-2-1.png"
+                      alt=""
+                    />
+                    <img
+                      class="animate__animated animate__fadeInRight"
+                      src="img/products/watch-slide-1-6.png"
+                      alt=""
+                    />
+                    <img
+                      class="animate__animated animate__fadeInRight"
+                      src="img/products/watch-slide-1-7.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </a> -->
             </div>
-          </a>
-          <a href="#!" class="swiper-slide">
-            <img src="/img/watch-cat-5.jpg" alt="">
-            <div class="category-infomation">
-              <h3>Accessories</h3>
-              <h4>0 product</h4>
-            </div>
-          </a>
-          <a href="#!" class="swiper-slide">
-            <img src="/img/clocks5_edited.jpg" alt="">
-            <div class="category-infomation">
-              <h3>Clocks</h3>
-              <h4>0 product</h4>
-            </div>
-
-          </a>
-          <a href="#!" class="swiper-slide">
-            <img src="/img/prod-lamp-2_edited.jpg" alt="">
-            <div class="category-infomation">
-              <h3>Lighting</h3>
-              <h4>0 product</h4>
-            </div>
-          </a>
-
         </div>
       </div>
-    </div>
 
-    <!-- 7.2 -->
-    <div class="showWatch">
-      <div class="container">
-        <h2>Welcome to WoodMart – The #1 Online <br><strong class="boldInH2ForShowWatch">Store Of Luxury
-            Watches</strong>.
-        </h2>
-        <div class="shoppingCartParence row">
-          <!-- <div class="shoppingCartItem col-6 col-md-3">
+      <!-- 7.1 -->
+      <div class="categoriesSlider">
+        <div class="swiper mySwiper swiper1">
+          <div class="swiper-wrapper">
+            <a href="#!" class="swiper-slide">
+              <img src="/img/watch-cat-3.jpg" alt="" />
+              <div class="category-infomation">
+                <h3>watch</h3>
+                <h4>5 product</h4>
+              </div>
+            </a>
+            <a href="#!" class="swiper-slide">
+              <img src="/img/watch-cat-5.jpg" alt="" />
+              <div class="category-infomation">
+                <h3>Accessories</h3>
+                <h4>0 product</h4>
+              </div>
+            </a>
+            <a href="#!" class="swiper-slide">
+              <img src="/img/clocks5_edited.jpg" alt="" />
+              <div class="category-infomation">
+                <h3>Clocks</h3>
+                <h4>0 product</h4>
+              </div>
+            </a>
+            <a href="#!" class="swiper-slide">
+              <img src="/img/prod-lamp-2_edited.jpg" alt="" />
+              <div class="category-infomation">
+                <h3>Lighting</h3>
+                <h4>0 product</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.2 -->
+      <div class="showWatch">
+        <div class="container">
+          <h2>
+            Welcome to WoodMart – The #1 Online <br /><strong
+              class="boldInH2ForShowWatch"
+              >Store Of Luxury Watches</strong
+            >.
+          </h2>
+          <div class="shoppingCartParence row">
+            <!-- <div class="shoppingCartItem col-6 col-md-3">
             <div class="shoppingCartImgDiv">
               <a href="#">
                 <img src="img/products/product-watch-2.jpg" alt="">
@@ -327,226 +428,469 @@
                 </a>
               </div>
             </div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- 7.3 -->
-    <div class="quickIntroduction">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 imgsIntroductionDiv">
-            <img src="img/introudaction/watch-banner-14.jpg" alt="" width="400" height="548" class="col-6">
-            <img src="img/introudaction/watch-banner-7.jpg" alt="" class="col-6">
-            <img src="img/introudaction/watch-banner-8.jpg" alt="" class="col-6">
-          </div>
-          <div class="col-12 col-md-6">
-            <h2>As an official stockist of all brands, we offer <strong class="boldInH2ForShowWatch">watches for men &
-                ladies.</strong>
-            </h2>
-            <p class="border-bottom">It is a long established fact that a reader will be distracted by the readable
-              content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many
-              desktop publishing packages and web.</p>
-            <div class="signAndFollowInQuickIntroduction">
-              <p>Follow me on <a href="">Twitter</a> and <a href="">Facebook</a></p>
-              <img src="img/introudaction/austen.jpg" alt="">
-            </div>
-          </div>
-
-        </div>
-        <div class="vc_column_container row">
-          <div class="vc_column-inner col-12 col-lg-4">
-            <div class="info-box-icon-InQuickIntroduction">01.</div>
-            <div class="info-box-text-InQuickIntroduction">
-              <div>FAST DELIVERY</div>
-              <p>Massa a erat nam aliquam condi mentu tum in cum proin.</p>
-            </div>
-          </div>
-          <div class="vc_column-inner col-12 col-lg-4">
-            <div class="info-box-icon-InQuickIntroduction">02.</div>
-            <div class="info-box-text-InQuickIntroduction">
-              <div>3 YEARS WARRANTY</div>
-              <p>Adipiscing proin lobortis nunc luctus conubia ac facilisi.</p>
-            </div>
-          </div>
-          <div class="vc_column-inner col-12 col-lg-4">
-            <div class="info-box-icon-InQuickIntroduction">03.</div>
-            <div class="info-box-text-InQuickIntroduction">
-              <div>SWISS HAND MADE</div>
-              <p>Ulamcorper parturient adipiscing nisi rutrum eleifend class.</p>
-            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- 7.4 -->
-    <div class="bestProductInMainPage">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6"><img src="img/introudaction/best-sellers-product.png" alt=""></div>
-          <div class="col-12 col-md-6">
-            <h2><strong class="boldInH2ForShowWatch">Original</strong> Black Watches.
-            </h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using sometimes by accident.</p>
-            <div class="capabilityForBestProduct row">
-              <div class="col-6 col-lg-4 capabilityForBestProductItems">
-                <div><svg version="1.1" id="svg-1417" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <g>
-                      <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M11,41.265C11.052,53.27,20.401,63,32,63
+      <!-- 7.3 -->
+      <div class="quickIntroduction">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 imgsIntroductionDiv">
+              <img
+                src="img/introudaction/watch-banner-14.jpg"
+                alt=""
+                width="400"
+                height="548"
+                class="col-6"
+              />
+              <img
+                src="img/introudaction/watch-banner-7.jpg"
+                alt=""
+                class="col-6"
+              />
+              <img
+                src="img/introudaction/watch-banner-8.jpg"
+                alt=""
+                class="col-6"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <h2>
+                As an official stockist of all brands, we offer
+                <strong class="boldInH2ForShowWatch"
+                  >watches for men & ladies.</strong
+                >
+              </h2>
+              <p class="border-bottom">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters, as opposed to using ‘Content
+                here, content here’, making it look like readable English. Many
+                desktop publishing packages and web.
+              </p>
+              <div class="signAndFollowInQuickIntroduction">
+                <p>
+                  Follow me on <a href="">Twitter</a> and
+                  <a href="">Facebook</a>
+                </p>
+                <img src="img/introudaction/austen.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="vc_column_container row">
+            <div class="vc_column-inner col-12 col-lg-4">
+              <div class="info-box-icon-InQuickIntroduction">01.</div>
+              <div class="info-box-text-InQuickIntroduction">
+                <div>FAST DELIVERY</div>
+                <p>Massa a erat nam aliquam condi mentu tum in cum proin.</p>
+              </div>
+            </div>
+            <div class="vc_column-inner col-12 col-lg-4">
+              <div class="info-box-icon-InQuickIntroduction">02.</div>
+              <div class="info-box-text-InQuickIntroduction">
+                <div>3 YEARS WARRANTY</div>
+                <p>
+                  Adipiscing proin lobortis nunc luctus conubia ac facilisi.
+                </p>
+              </div>
+            </div>
+            <div class="vc_column-inner col-12 col-lg-4">
+              <div class="info-box-icon-InQuickIntroduction">03.</div>
+              <div class="info-box-text-InQuickIntroduction">
+                <div>SWISS HAND MADE</div>
+                <p>
+                  Ulamcorper parturient adipiscing nisi rutrum eleifend class.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.4 -->
+      <div class="bestProductInMainPage">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="img/introudaction/best-sellers-product.png" alt="" />
+            </div>
+            <div class="col-12 col-md-6">
+              <h2>
+                <strong class="boldInH2ForShowWatch">Original</strong> Black
+                Watches.
+              </h2>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters, as opposed to using sometimes by
+                accident.
+              </p>
+              <div class="capabilityForBestProduct row">
+                <div class="col-6 col-lg-4 capabilityForBestProductItems">
+                  <div>
+                    <svg
+                      version="1.1"
+                      id="svg-1417"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <path
+                          fill="none"
+                          stroke="#5797b2"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          d="M11,41.265C11.052,53.27,20.401,63,32,63
                       s21-9.73,21-21.735C53,25.729,32.035,1,32.035,1S10.931,25.729,11,41.265z"
-                        style="stroke-dasharray: 160, 162; stroke-dashoffset: 0;"></path>
-                    </g>
-                  </svg></div>
-                <h5>5 ATM Water
-                  Resistance
-                </h5>
-              </div>
-              <div class="col-6 col-lg-4 capabilityForBestProductItems">
-                <div><svg version="1.0" id="svg-9255" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M18,26.066L2,33L32,45L62,33L46,26.067"
-                      style="stroke-dasharray: 100, 102; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M18,39.066L2,46L32,58L62,46L46,39.067"
-                      style="stroke-dasharray: 100, 102; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M32,32L62,20L32,7L2,20Z" style="stroke-dasharray: 131, 133; stroke-dashoffset: 0;"></path>
-                  </svg></div>
-                <h5>Design
-                  Resistance
-                </h5>
-              </div>
-              <div class="col-6 col-lg-4 capabilityForBestProductItems">
-                <div><svg version="1.1" id="svg-5695" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M33,63L56,32L33,1L10,32Z" style="stroke-dasharray: 155, 157; stroke-dashoffset: 0;"></path>
-                  </svg></div>
-                <h5>Sapphire
-                  Glass
-                </h5>
-              </div>
-              <div class="col-6 col-lg-4 capabilityForBestProductItems">
-                <div><svg version="1.1" id="svg-3557" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M53.92,10.081c12.107,12.105,12.107,31.732,0,43.838
+                          style="
+                            stroke-dasharray: 160, 162;
+                            stroke-dashoffset: 0;
+                          "
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <h5>5 ATM Water Resistance</h5>
+                </div>
+                <div class="col-6 col-lg-4 capabilityForBestProductItems">
+                  <div>
+                    <svg
+                      version="1.0"
+                      id="svg-9255"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M18,26.066L2,33L32,45L62,33L46,26.067"
+                        style="stroke-dasharray: 100, 102; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M18,39.066L2,46L32,58L62,46L46,39.067"
+                        style="stroke-dasharray: 100, 102; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M32,32L62,20L32,7L2,20Z"
+                        style="stroke-dasharray: 131, 133; stroke-dashoffset: 0"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h5>Design Resistance</h5>
+                </div>
+                <div class="col-6 col-lg-4 capabilityForBestProductItems">
+                  <div>
+                    <svg
+                      version="1.1"
+                      id="svg-5695"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M33,63L56,32L33,1L10,32Z"
+                        style="stroke-dasharray: 155, 157; stroke-dashoffset: 0"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h5>Sapphire Glass</h5>
+                </div>
+                <div class="col-6 col-lg-4 capabilityForBestProductItems">
+                  <div>
+                    <svg
+                      version="1.1"
+                      id="svg-3557"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M53.92,10.081c12.107,12.105,12.107,31.732,0,43.838
                     c-12.106,12.108-31.734,12.108-43.84,0c-12.107-12.105-12.107-31.732,0-43.838C22.186-2.027,41.813-2.027,53.92,10.081z"
-                      style="stroke-dasharray: 195, 197; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M9.001000000000001,32A22.999,22.999 0,1,1 54.998999999999995,32A22.999,22.999 0,1,1 9.001000000000001,32"
-                      style="stroke-dasharray: 145, 147; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M17,32A15,15 0,1,1 47,32A15,15 0,1,1 17,32"
-                      style="stroke-dasharray: 95, 97; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M25.001,32A6.999,6.999 0,1,1 38.999,32A6.999,6.999 0,1,1 25.001,32"
-                      style="stroke-dasharray: 44, 46; stroke-dashoffset: 0;"></path>
-                  </svg></div>
-                <h5>German
-                  Steel Band
-                </h5>
-              </div>
-              <div class="col-6 col-lg-4 capabilityForBestProductItems capabilityForBestProductItemsDnone">
-                <div><svg version="1.1" id="svg-2744" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M1,63L1,2L62,63Z"
-                      style="stroke-dasharray: 209, 211; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M14,54L14,30L38,54Z"
-                      style="stroke-dasharray: 82, 84; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M8,22L2,22"
-                      style="stroke-dasharray: 6, 8; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M6,30L2,30"
-                      style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M8,38L2,38"
-                      style="stroke-dasharray: 6, 8; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M6,46L2,46"
-                      style="stroke-dasharray: 4, 6; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M8,54L2,54"
-                      style="stroke-dasharray: 6, 8; stroke-dashoffset: 0;"></path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                      d="M25,1L19,7L55,43L63,45L61,37Z" style="stroke-dasharray: 127, 129; stroke-dashoffset: 0;">
-                    </path>
-                    <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M25,13L31,7"
-                      style="stroke-dasharray: 9, 11; stroke-dashoffset: 0;"></path>
-                  </svg></div>
-                <h5>Material
-                  Design
-                </h5>
-              </div>
-              <div class="col-6 col-lg-4 capabilityForBestProductItems capabilityForBestProductItemsDnone">
-                <div><svg version="1.1" id="svg-6900" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
-                    viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <g>
-                      <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10" d="M32,1L26,1L26,10L20,12L14,6L6,14L12,20L
+                        style="stroke-dasharray: 195, 197; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M9.001000000000001,32A22.999,22.999 0,1,1 54.998999999999995,32A22.999,22.999 0,1,1 9.001000000000001,32"
+                        style="stroke-dasharray: 145, 147; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M17,32A15,15 0,1,1 47,32A15,15 0,1,1 17,32"
+                        style="stroke-dasharray: 95, 97; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M25.001,32A6.999,6.999 0,1,1 38.999,32A6.999,6.999 0,1,1 25.001,32"
+                        style="stroke-dasharray: 44, 46; stroke-dashoffset: 0"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h5>German Steel Band</h5>
+                </div>
+                <div
+                  class="col-6 col-lg-4 capabilityForBestProductItems capabilityForBestProductItemsDnone"
+                >
+                  <div>
+                    <svg
+                      version="1.1"
+                      id="svg-2744"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M1,63L1,2L62,63Z"
+                        style="stroke-dasharray: 209, 211; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M14,54L14,30L38,54Z"
+                        style="stroke-dasharray: 82, 84; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M8,22L2,22"
+                        style="stroke-dasharray: 6, 8; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M6,30L2,30"
+                        style="stroke-dasharray: 4, 6; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M8,38L2,38"
+                        style="stroke-dasharray: 6, 8; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M6,46L2,46"
+                        style="stroke-dasharray: 4, 6; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M8,54L2,54"
+                        style="stroke-dasharray: 6, 8; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M25,1L19,7L55,43L63,45L61,37Z"
+                        style="stroke-dasharray: 127, 129; stroke-dashoffset: 0"
+                      ></path>
+                      <path
+                        fill="none"
+                        stroke="#5797b2"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        d="M25,13L31,7"
+                        style="stroke-dasharray: 9, 11; stroke-dashoffset: 0"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h5>Material Design</h5>
+                </div>
+                <div
+                  class="col-6 col-lg-4 capabilityForBestProductItems capabilityForBestProductItemsDnone"
+                >
+                  <div>
+                    <svg
+                      version="1.1"
+                      id="svg-6900"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 64 64"
+                      enable-background="new 0 0 64 64"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <path
+                          fill="none"
+                          stroke="#5797b2"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          d="M32,1L26,1L26,10L20,12L14,6L6,14L12,20L
                       10,26L1,26L1,38L10,38L12,44L6,50L14,58L20,52L26,54L26,63L32,63L38,63L38,54L44,52L50,58L58,50L52,44L54,38L63,38L63,26L54,26L
-                      52,20L58,14L50,6L44,12L38,10L38,1Z" style="stroke-dasharray: 284, 286; stroke-dashoffset: 0;">
-                      </path>
-                      <path fill="none" stroke="#5797b2" stroke-width="2" stroke-miterlimit="10"
-                        d="M26,32A6,6 0,1,1 38,32A6,6 0,1,1 26,32"
-                        style="stroke-dasharray: 38, 40; stroke-dashoffset: 0;"></path>
-                    </g>
-                  </svg></div>
-                <h5>Swiss
-                  Movement
-                </h5>
+                      52,20L58,14L50,6L44,12L38,10L38,1Z"
+                          style="
+                            stroke-dasharray: 284, 286;
+                            stroke-dashoffset: 0;
+                          "
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#5797b2"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          d="M26,32A6,6 0,1,1 38,32A6,6 0,1,1 26,32"
+                          style="stroke-dasharray: 38, 40; stroke-dashoffset: 0"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <h5>Swiss Movement</h5>
+                </div>
+              </div>
+              <div class="btnForBestProduct">
+                <button>ADD TO CARD</button>
+                <button>VIEW MORE</button>
               </div>
             </div>
-            <div class="btnForBestProduct">
-              <button>ADD TO CARD</button>
-              <button>VIEW MORE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.5 -->
+      <div class="gallery">
+        <div class="container">
+          <h2 class="col-12">
+            Our <strong class="boldInH2ForShowWatch">Gallery</strong> By
+            WoodMart
+          </h2>
+          <div class="galleryDivImg col-12 row">
+            <div class="col-12 col-sm-3">
+              <img
+                src="img/galleryimg/watch-project.jpg"
+                class="galleryImg"
+                alt="2"
+              />
+            </div>
+            <div class="col-12 col-sm-3">
+              <img
+                src="img/galleryimg/watch-project-3.jpg"
+                class="galleryImg"
+                alt="3"
+              />
+              <img
+                src="img/galleryimg/watch-project-2.jpg"
+                class="galleryImg"
+                alt="4"
+              />
+            </div>
+            <div class="col-12 col-sm-3">
+              <img
+                src="img/galleryimg/watch-project-6.jpg"
+                class="galleryImg"
+                alt="5"
+              />
+            </div>
+            <div class="col-12 col-sm-3">
+              <img
+                src="img/galleryimg/watch-project-8.jpg"
+                class="galleryImg"
+                alt="6"
+              />
+              <img
+                src="img/galleryimg/watch-project-7.jpg"
+                class="galleryImg"
+                alt="7"
+              />
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- 7.5 -->
-    <div class="gallery">
-      <div class="container">
-        <h2 class="col-12">Our <strong class="boldInH2ForShowWatch">Gallery</strong> By WoodMart
-        </h2>
-        <div class="galleryDivImg col-12 row">
-          <div class="col-12 col-sm-3">
-            <img src="img/galleryimg/watch-project.jpg" class="galleryImg" alt="2">
-          </div>
-          <div class="col-12 col-sm-3">
-            <img src="img/galleryimg/watch-project-3.jpg" class="galleryImg" alt="3">
-            <img src="img/galleryimg/watch-project-2.jpg" class="galleryImg" alt="4">
-          </div>
-          <div class="col-12 col-sm-3">
-            <img src="img/galleryimg/watch-project-6.jpg" class="galleryImg" alt="5">
-          </div>
-          <div class="col-12 col-sm-3">
-            <img src="img/galleryimg/watch-project-8.jpg" class="galleryImg" alt="6">
-            <img src="img/galleryimg/watch-project-7.jpg" class="galleryImg" alt="7">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 7.6 -->
-    <div class="magazinePart">
-      <div class="container">
-        <h2 class="col-12">WoodMart <strong class="boldInH2ForShowWatch">Magazine</strong>
-        </h2>
-        <div class="magazineSlider">
-          <div class="swiper  swiper2">
-            <div class="swiper-wrapper placeToAddMagazineItem">
-              <!-- <a class="swiper-slide" href="">
+      <!-- 7.6 -->
+      <div class="magazinePart">
+        <div class="container">
+          <h2 class="col-12">
+            WoodMart <strong class="boldInH2ForShowWatch">Magazine</strong>
+          </h2>
+          <div class="magazineSlider">
+            <div class="swiper swiper2">
+              <div class="swiper-wrapper placeToAddMagazineItem">
+                <!-- <a class="swiper-slide" href="">
                 <div class=" row ">
                   <div class="col-12 col-md-6">
                     <img class="imgMagazine" src="img/magazine/watch-post-4.jpg" alt="">
@@ -578,24 +922,25 @@
 
                 </div>
               </a> -->
-            </div>
-            <div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
+              </div>
+              <div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- 7.7 -->
-    <div class="instagramPosts">
-      <h2 class="col-12">We’re Now On <strong class="boldInH2ForShowWatch"> Instagram</strong>
-      </h2>
-      <div class="swiper swiper3">
-        <div class="swiper-wrapper placeToAddInstagramPost">
-          <!-- <a href="#!" class="swiper-slide">
+      <!-- 7.7 -->
+      <div class="instagramPosts">
+        <h2 class="col-12">
+          We’re Now On <strong class="boldInH2ForShowWatch"> Instagram</strong>
+        </h2>
+        <div class="swiper swiper3">
+          <div class="swiper-wrapper placeToAddInstagramPost">
+            <!-- <a href="#!" class="swiper-slide">
             <img src="img/instagram/wd-inst-watch-1.jpg.webp" alt="">
             <div class="divAboutInstaPost">
               <div>
@@ -608,31 +953,34 @@
               </div>
             </div>
           </a> -->
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- 8 -->
-  <footer>
-    <div class="container">
-      <div class="row foot1">
-        <div class="col-12 col-sm-6 col-lg-3">
-          <img class="navbar-logo" src="img/wood-logo-dark.svg" alt="">
-          <p>
-            Condimentum adipiscing vel neque dis nam parturient orci at scelerisque neque dis nam parturient.
-          </p>
-          <div class="teleNumberDiv">
-            <div><i class="bi bi-geo-alt"></i>451 Wall Street, UK, London</div>
-            <div><i class="bi bi-phone"></i>Phone: (064) 332-1233</div>
-            <div><i class="bi bi-envelope"></i> Fax: (099) 453-1357</div>
+    <!-- 8 -->
+    <footer>
+      <div class="container">
+        <div class="row foot1">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <img class="navbar-logo" src="img/wood-logo-dark.svg" alt="" />
+            <p>
+              Condimentum adipiscing vel neque dis nam parturient orci at
+              scelerisque neque dis nam parturient.
+            </p>
+            <div class="teleNumberDiv">
+              <div>
+                <i class="bi bi-geo-alt"></i>451 Wall Street, UK, London
+              </div>
+              <div><i class="bi bi-phone"></i>Phone: (064) 332-1233</div>
+              <div><i class="bi bi-envelope"></i> Fax: (099) 453-1357</div>
+            </div>
+            <div></div>
           </div>
-          <div></div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="recentPostsUl">
-            <li>RECENT POSTS</li>
-            <!-- <li>RECENT POSTS</li>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <ul class="recentPostsUl">
+              <li>RECENT POSTS</li>
+              <!-- <li>RECENT POSTS</li>
             <li class="recentPostsLi">
               <a class="recent-posts-thumbnail" href="">
                 <img class="attachment-large wp-post-image " src="img/magazine/watch-post-3.jpg" width="75"
@@ -646,50 +994,47 @@
                   Comment</a>
               </div>
             </li> -->
-          </ul>
-
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-2">
+            <ul>
+              <li>SOCIAL</li>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Youtube</a></li>
+              <li><a href="">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-2">
+            <ul>
+              <li>OUR STORES</li>
+              <li><a href="">New York</a></li>
+              <li><a href="">London SF</a></li>
+              <li><a href="">Edinburgh</a></li>
+              <li><a href="">Los Angeles</a></li>
+              <li><a href="">Chicago</a></li>
+              <li><a href="">Las Vegas</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-2">
+            <ul>
+              <li>USEFUL LINKS</li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Returns</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-12 col-sm-4 col-lg-2">
-          <ul>
-            <li>SOCIAL</li>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Youtube</a></li>
-            <li><a href="">Instagram</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-sm-4 col-lg-2">
-          <ul>
-            <li>OUR STORES</li>
-            <li><a href="">New York</a></li>
-            <li><a href="">London SF</a></li>
-            <li><a href="">Edinburgh</a></li>
-            <li><a href="">Los Angeles</a></li>
-            <li><a href="">Chicago</a></li>
-            <li><a href="">Las Vegas</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-sm-4 col-lg-2">
-          <ul>
-            <li>USEFUL LINKS</li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms & Conditions</a></li>
-            <li><a href="">Returns</a></li>
-          </ul>
-        </div>
+        <div class="foot2">© 2023 copyright</div>
       </div>
-      <div class="foot2">
-        © 2023 copyright
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- 9 -->
-  <a href="#" class="btnScrollToTop"><i class="bi bi-chevron-up"></i></a>
+    <!-- 9 -->
+    <a href="#" class="btnScrollToTop"><i class="bi bi-chevron-up"></i></a>
 
- <!-- 10 -->
-  <div class="modalQuickViewCard">
-    <!-- <div class="quickViewCard">
+    <!-- 10 -->
+    <div class="modalQuickViewCard">
+      <!-- <div class="quickViewCard">
       <span class="closeQuickViewCard">&times;</span>
       <div class="divImg-QuickViewCard">
         <img src="img/products/product-watch-5.jpg" alt="" class="img-QuickViewCard">
@@ -714,77 +1059,81 @@
         <p class="category-QuickViewCard">category : <a href="" class="category-QuickViewCardA">watch</a></p>
       </div>
     </div> -->
-  </div>
+    </div>
 
-  <script src="js/script.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    let swiper3 = new Swiper(".swiper3", {
-      slidesPerView: 1,
-      spaceBetween: 0,
+    <script src="js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      let swiper3 = new Swiper(".swiper3", {
+        slidesPerView: 1,
+        spaceBetween: 0,
 
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-          spaceBetween: 0,
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 0,
+          },
         },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 0,
-        },
-        1024: {
-          slidesPerView: 6,
-          spaceBetween: 0,
-        },
-      },
-    });
-    let swiper1 = new Swiper(".swiper1", {
-      slidesPerView: 1,
-      spaceBetween: 5,
+      });
+      let swiper1 = new Swiper(".swiper1", {
+        slidesPerView: 1,
+        spaceBetween: 5,
 
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-          spaceBetween: 10,
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
         },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 10,
-        },
-      },
-    });
-    let swiper2 = new Swiper(".swiper2", {
-      slidesPerView: 1,
-      spaceBetween: 5,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      rewind: "true",
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-      },
-    });
-  </script>
-</body>
+      });
 
+      let swiper2 = new Swiper(".swiper2", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        rewind: "true",
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

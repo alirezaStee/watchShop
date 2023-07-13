@@ -116,9 +116,24 @@
 .swiper2 {
   padding: 0 20px;
 }
-.swiper-slide {
-  background: none;
+ .swiper2 .swiper-slide {
+  background-color: rgba(247, 247, 247, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
+.swiper2 .swiper-slide {
+  background: none;
+  transition: 0.2s;
+}
+.swiper2 .swiper-slide .imgMagazine {
+  width: 100%;
+  height: auto;
+  transition: 0.25s;
+  object-fit: cover;
+}
+
 .magazinePart {
   padding-bottom: 50px;
   border-bottom: 1px solid #e6e6e6;
@@ -302,8 +317,25 @@
   .mainDivAboutMagazine {
     margin-left: -10px;
   }
+  .magazinePart .swiper2 .swiper-slide:hover{
+    transform: scale(1.02);
+  }
 }
 /* ====================================================================================== style for instagramPosts======================================================== */
+.swiper3 .swiper-slide {
+  background-color: rgba(247, 247, 247, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.swiper3 .swiper-slide img {
+  width: 100%;
+  height: auto;
+  transition: 0.25s;
+  object-fit: cover;
+}
+
 .instagramPosts .swiper3 .swiper-slide:hover .divAboutInstaPost {
   visibility: visible;
   opacity: 1;
@@ -341,5 +373,8 @@
 @media (min-width: 640px) {
   .divAboutInstaPost > div {
     display: block;
+  }
+  .swiper3  .swiper-slide:hover img {
+    transform: scale(1.1);
   }
 }

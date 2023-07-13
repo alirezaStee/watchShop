@@ -693,3 +693,260 @@
   padding: 0;
   overflow: hidden;
 }
+
+.loginModal {
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginModalActive {
+  right: 0px;
+}
+
+.topof-loginModul {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+  box-sizing: border-box;
+}
+
+.topof-loginModul h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.topof-loginModul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.bottom-loginModul {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.bottom-loginModul form {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.bottom-loginModul form > input,
+form button {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  height: 42px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bottom-loginModul form > input {
+  outline: none;
+  border: 1px solid #e9e9e9;
+}
+
+.bottom-loginModul form button {
+  color: #ffffff;
+  background-color: var(--color-bule);
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-loginModul form label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bottom-loginModul form label .required {
+  border: none;
+  color: #e01020;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.loginModal-footer-of-form {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginModal-footer-of-form input {
+  margin-right: 5px;
+}
+
+.loginModal-footer-of-form .lost-password-btn-liginModal {
+  color: var(--color-bule);
+}
+
+.box-no-account-sighmodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #e9e9e9;
+  border-left: none;
+  border-right: none;
+}
+
+.box-no-account-sighmodal i {
+  font-size: 70px;
+  color: #e9e9e9;
+}
+
+.box-no-account-sighmodal h5,
+.box-no-account-sighmodal a {
+  font-size: 14px;
+}
+
+.box-no-account-sighmodal a {
+  border-bottom: 3px solid var(--color-bule);
+}
+
+/* ====================================================================================== style for modal login ======================================================== */
+.loginModal {
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginModalActive {
+  right: 0px;
+}
+
+.topof-loginModul {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+  box-sizing: border-box;
+}
+
+.topof-loginModul h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.topof-loginModul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.bottom-loginModul {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.bottom-loginModul form {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.bottom-loginModul form > input,
+form button {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  height: 42px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bottom-loginModul form > input {
+  outline: none;
+  border: 1px solid #e9e9e9;
+}
+
+.bottom-loginModul form button {
+  color: #ffffff;
+  background-color: var(--color-bule);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.bottom-loginModul form button:hover {
+  background-color: #287292;
+}
+
+.bottom-loginModul form label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bottom-loginModul form label .required {
+  border: none;
+  color: #e01020;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.loginModal-footer-of-form {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginModal-footer-of-form input {
+  margin-right: 5px;
+}
+
+.loginModal-footer-of-form .lost-password-btn-liginModal {
+  color: var(--color-bule);
+}
+
+.box-no-account-sighmodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #e9e9e9;
+  border-left: none;
+  border-right: none;
+}
+
+.box-no-account-sighmodal i {
+  font-size: 70px;
+  color: #e9e9e9;
+}
+
+.box-no-account-sighmodal h5,
+.box-no-account-sighmodal a {
+  font-size: 14px;
+}
+
+.box-no-account-sighmodal a {
+  border-bottom: 3px solid var(--color-bule);
+}

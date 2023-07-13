@@ -1,181 +1,181 @@
- /* ================================navbar=========================== */
+/* ================================navbar=========================== */
 
- .navbar {
-    background-color: #ffffff;
-    z-index: 9999;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+.navbar {
+  background-color: #ffffff;
+  z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+  background-color: #ffffff;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbar a,
+a:link,
+a:visited {
+  color: #333333;
+}
+
+.navbar a:hover {
+  color: #6e6e6e;
+}
+
+.navbar-logo {
+  width: 180px;
+  order: 1;
+}
+
+/* ====ul link style ==== */
+
+.navbar-ul-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.navbar-ul-links li {
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* ====main link style ==== */
+.navbar-main-links {
+  order: -1;
+}
+
+.navbar-main-links li a {
+  position: relative;
+  display: block;
+}
+
+.navbar-main-links li a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-bule);
+  transition: 0.3s;
+}
+
+.navbar-main-links li a:hover::after {
+  width: 100%;
+}
+
+/* ====menu icon btn style ==== */
+
+.navbar-main-links .navbar-menu-icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu-icon-btn span {
+  font-size: 14px;
+  display: none;
+}
+
+/* =no bule line when hover = */
+.navbar-main-links .navbar-menu-icon-btn:hover::after {
+  width: 0;
+}
+
+/* ==== style for navbar-shopbasket-btn in nav ==== */
+
+.navbar-shopbasket-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-shopbasket-icon {
+  position: relative;
+  margin-right: 10px;
+}
+
+.navbar-number-of-product {
+  position: absolute;
+  top: -6px;
+  inset-inline-end: -9px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-bule);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 15px;
+}
+
+.navbar-totall-price {
+  font-size: 14px;
+  display: none;
+}
+
+/* ==== style for navbar when page scroll ==== */
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  animation-name: drop-down-navbar-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes drop-down-navbar-animation {
+  from {
+    top: -60px;
   }
 
-  .navbar .container {
-    background-color: #ffffff;
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
+  to {
+    top: 0;
   }
+}
 
-  .navbar a,
-  a:link,
-  a:visited {
-    color: #333333;
-  }
+.sticky + .wwww {
+  margin-top: 84px;
+}
 
-  .navbar a:hover {
-    color: #6e6e6e;
-  }
+.display-for-md-nvbar {
+  display: none;
+}
 
-  .navbar-logo {
-    width: 180px;
-    order: 1;
-  }
-
-  /* ====ul link style ==== */
-
-  .navbar-ul-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-  }
-
-  .navbar-ul-links li {
-    margin: 0 10px;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-
-  /* ====main link style ==== */
-  .navbar-main-links {
-    order: -1;
-  }
-
-  .navbar-main-links li a {
-    position: relative;
+@media (min-width: 768px) {
+  .navbar-menu-icon-btn span {
     display: block;
   }
+}
 
-  .navbar-main-links li a::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-bule);
-    transition: 0.3s;
-  }
-
-  .navbar-main-links li a:hover::after {
-    width: 100%;
-  }
-
-  /* ====menu icon btn style ==== */
-
-  .navbar-main-links .navbar-menu-icon-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar-menu-icon-btn span {
-    font-size: 14px;
-    display: none;
-  }
-
-  /* =no bule line when hover = */
-  .navbar-main-links .navbar-menu-icon-btn:hover::after {
-    width: 0;
-  }
-
-  /* ==== style for navbar-shopbasket-btn in nav ==== */
-
-  .navbar-shopbasket-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar-shopbasket-icon {
-    position: relative;
-    margin-right: 10px;
-  }
-
-  .navbar-number-of-product {
-    position: absolute;
-    top: -6px;
-    inset-inline-end: -9px;
-    z-index: 1;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: var(--color-bule);
-    color: #fff;
-    text-align: center;
-    letter-spacing: 0;
-    font-weight: 400;
-    font-size: 9px;
-    line-height: 15px;
+@media (min-width: 1024px) {
+  .navbar-main-links {
+    order: 0;
   }
 
   .navbar-totall-price {
-    font-size: 14px;
-    display: none;
-  }
-
-  /* ==== style for navbar when page scroll ==== */
-  .sticky-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #ffffff;
-    animation-name: drop-down-navbar-animation;
-    animation-duration: 0.5s;
-  }
-
-  @keyframes drop-down-navbar-animation {
-    from {
-      top: -60px;
-    }
-
-    to {
-      top: 0;
-    }
-  }
-
-  .sticky+.wwww {
-    margin-top: 84px;
+    display: block;
   }
 
   .display-for-md-nvbar {
+    display: block;
+  }
+
+  .display-for-lg-nvbar {
     display: none;
   }
-
-  @media (min-width: 768px) {
-    .navbar-menu-icon-btn span {
-      display: block;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .navbar-main-links {
-      order: 0;
-    }
-
-    .navbar-totall-price {
-      display: block;
-    }
-
-    .display-for-md-nvbar {
-      display: block;
-    }
-
-    .display-for-lg-nvbar {
-      display: none;
-    }
-  }
+}

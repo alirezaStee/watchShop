@@ -58,7 +58,9 @@ backgroundDarkDivWhenModulsOpean.addEventListener("click", () => {
   menuModal.classList.remove("menu-modalActive");
 
   shoppingCardModul.classList.remove("shoppingCardModulActive");
-  modalSearch.classList.remove("modalSearchActive");
+
+  closeModulSearch();
+  closeloginModal();
 });
 
 function makeBackgroundDarkWhenModulsOpean() {
@@ -118,6 +120,31 @@ closeShopCardModulBtn.addEventListener("click", () => {
   removeBackgroundDarkWhenModulsClose();
   closeModulSearch();
 });
+
+/*======shopping card modal======*/
+//! وقتی روی لوگ این کلید میشود مودال لوگ این باز و بقییه قسمت ها سیاه میشود
+let navbarLoginBtn = document.querySelector(".navbar-login-btn");
+let loginModal = document.querySelector(".loginModal");
+let closeloginModalBtn = document.querySelector(".closeloginModalBtn");
+navbarLoginBtn.addEventListener("click", () => {
+  openloginModal();
+});
+
+function openloginModal() {
+  loginModal.classList.add("loginModalActive");
+  makeBackgroundDarkWhenModulsOpean();
+  closeModulSearch();
+}
+closeloginModalBtn.addEventListener("click", () => {
+  closeloginModal();
+  removeBackgroundDarkWhenModulsClose();
+  closeModulSearch();
+});
+
+function closeloginModal() {
+  loginModal.classList.remove("loginModalActive");
+}
+
 /*======search modal======*/
 //! وقتی روی ایکون سرچ کلید میشود مودال سرچ  باز میشود و ایکون سرچ تغییر میکند
 let navbarSearchBtn = document.querySelector(".navbar-search-btn");
@@ -186,27 +213,32 @@ galleryImgs.forEach((img) => {
 
 /*======main slider======*/
 //! ساخت سلایدر اصلی صفحه
-
+let slider = document.querySelector(".slider");
+let allMainSlide = [];
 //? پیدا کردن محصولاتی که برای اسلاید  اصلی هستند
 let placeToAddMainSlide = document.querySelector(".placeToAddMainSlide");
 
 let findSliderProduct = allData.products.filter((product) => {
   return product.category === "watch" && product.slider;
 });
-//? ساخت قالب هر اسلاید
+// //? ساخت قالب هر اسلاید
 let makeSlideItem = findSliderProduct.forEach((item) => {
   makeMainSlideProduct(item);
 });
 function makeMainSlideProduct(product) {
   let tagA = document.createElement("a");
   tagA.href = "#";
-  tagA.className = "slide";
+  tagA.className = "slide swiper-slide";
+  tagA.id = product.id;
+  let divContiner = document.createElement("div");
+  divContiner.className = "container";
+  tagA.append(divContiner);
 
   let divAbout = `<div class="div-about-watch-in-slide"><h2 class=" animate__animated animate__fadeInUpBig ">${
     product.slider.h2
   }</h2><p class="animate__animated animate__fadeInUpBig animate__delay-2s">${
     product.slider.p
-  }</p><div class="slide-price animate__animated animate__fadeInUpBig animate__delay-3s"><a  href="">ADD TO CARD</a><div>${product.price.toFixed(
+  }</p><div class="slide-price animate__animated animate__fadeInUpBig animate__delay-3s"><button  >ADD TO CARD</button><div>${product.price.toFixed(
     2
   )}$</div></div></div>`;
 
@@ -217,49 +249,76 @@ function makeMainSlideProduct(product) {
     let img = `<img class="animate__animated animate__fadeInRight" src="${src}" alt=""></img>`;
     divImg.innerHTML += img;
   });
-  tagA.innerHTML = divAbout;
+  divContiner.innerHTML = divAbout;
 
-  tagA.append(divImg);
-
+  divContiner.append(divImg);
   placeToAddMainSlide.append(tagA);
-}
 
-//! ساخت فانکشن برای عوض کردن اسلاید ها
-let allMainSlide = document.querySelectorAll(".slide");
-let slider = document.querySelector(".slider");
-let currentSlide = 1;
-
-function mainSlideChangeBackground(bgPrimery, bgsecondery) {
-  if (window.innerWidth >= 768) {
-    slider.style.background = bgsecondery;
-  } else {
-    slider.style.background = bgPrimery;
-  }
-}
-
-function changeSlide() {
-  allMainSlide.forEach((slide, index) => {
-    if (index === currentSlide - 1) {
-      slide.style.display = "flex";
-      mainSlideChangeBackground(
-        findSliderProduct[index].slider.bgPrimery,
-        findSliderProduct[index].slider.bgsecondery
-      );
-    } else {
-      slide.style.display = "none";
-    }
+  var swiper5 = new Swiper(".swiper5", {
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
+    effect: "fade",
+    on: {
+      init: function (e) {
+        let findProductVisible = allData.products.find(
+          (item) => item.id == e.visibleSlides[0].id
+        );
+        mainSlideChangeBackground(
+          findProductVisible.slider.bgPrimery,
+          findProductVisible.slider.bgsecondery,
+          e.visibleSlides[0]
+        );
+      },
+      slideChange: function (e) {
+        console.log(e.visibleSlides[0].style);
+        let findProductVisible = allData.products.find(
+          (item) => item.id == e.visibleSlides[0].id
+        );
+        mainSlideChangeBackground(
+          findProductVisible.slider.bgPrimery,
+          findProductVisible.slider.bgsecondery,
+          e.visibleSlides[0]
+        );
+      },
+    },
   });
-  if (currentSlide > allMainSlide.length - 1) {
-    currentSlide = 0;
-  }
-  currentSlide++;
 }
-changeSlide();
-setInterval(changeSlide, 6000);
 
-slider.addEventListener("dragend", (e) => {
-  changeSlide();
-});
+//! ساخت فانکشن برای عوض کردن بکگراند اسلاید ها
+
+function mainSlideChangeBackground(bgPrimery, bgsecondery, visibleSlides) {
+  if (window.innerWidth >= 768) {
+    visibleSlides.style.background = bgsecondery;
+  } else {
+    console.log(bgPrimery);
+    visibleSlides.style.background = bgPrimery;
+  }
+}
+// function changeSlide() {
+//   allMainSlide.forEach((slide, index) => {
+//     if (index === currentSlide - 1) {
+//       slide.style.display = "flex";
+//       mainSlideChangeBackground(
+//         findSliderProduct[index].slider.bgPrimery,
+//         findSliderProduct[index].slider.bgsecondery
+//       );
+//     } else {
+//       slide.style.display = "none";
+//     }
+//   });
+//   if (currentSlide > allMainSlide.length - 1) {
+//     currentSlide = 0;
+//   }
+//   currentSlide++;
+// }
+// changeSlide();
+// setInterval(changeSlide, 6000);
+
+// slider.addEventListener("dragend", (e) => {
+//   changeSlide();
+// });
 /*======shopping card======*/
 //! ساخت کارت های خرید و اضافه کردنشون به صفحه اصلی
 let placeToAddShoppingCardInMainPage = document.querySelector(
@@ -539,12 +598,14 @@ function makeQuickViewCardTempale(product) {
 </div>`;
   modalQuickViewCard.insertAdjacentHTML("beforeend", templat);
 }
-{/* <div class="quantity">
+{
+  /* <div class="quantity">
 <button class="btn minus1" onclick="minusShoppingItem()">-</button>
 <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number"
   onchange="inputValueShoppingItem(this,3)">
 <button class="btn add1" onclick="pluseShoppingItem()">+</button>
-</div> */}
+</div> */
+}
 // 3.2
 window.btnAddToBaskerInModalQuickView = btnAddToBaskerInModalQuickView;
 function btnAddToBaskerInModalQuickView(productId) {
@@ -778,8 +839,9 @@ function recentPost(datas, teedad, place) {
 let placeRecentPostsUl = document.querySelector(".recentPostsUl");
 recentPost(allData.magazine, 2, placeRecentPostsUl);
 
-
-export {makeNavbarSticy,
+export {
+  makeNavbarSticy,
   btnScrollToTopActive,
   removeNavbarSticy,
-  btnScrollToTopNotActive}
+  btnScrollToTopNotActive,
+};
