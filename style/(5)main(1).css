@@ -289,7 +289,7 @@
   object-fit: cover;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .swiper-slide .category-infomation {
     position: absolute;
     left: 20px;
@@ -316,7 +316,7 @@
     opacity: 0;
     transition: 0.25s ease;
   }
-} */
+}
 
 /* ====================================================================================== style for categoriesSlider======================================================== */
 
