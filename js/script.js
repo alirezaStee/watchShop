@@ -55,13 +55,16 @@ navbarMenuIconBtn.addEventListener("click", () => {
 backgroundDarkDivWhenModulsOpean.addEventListener("click", () => {
   removeBackgroundDarkWhenModulsClose();
 
-  menuModal.classList.remove("menu-modalActive");
+  closeMenuModal()
 
   shoppingCardModul.classList.remove("shoppingCardModulActive");
 
   closeModulSearch();
   closeloginModal();
 });
+function closeMenuModal(){
+  menuModal.classList.remove("menu-modalActive");
+}
 
 function makeBackgroundDarkWhenModulsOpean() {
   backgroundDarkDivWhenModulsOpean.classList.add(
@@ -123,17 +126,20 @@ closeShopCardModulBtn.addEventListener("click", () => {
 
 /*======shopping card modal======*/
 //! وقتی روی لوگ این کلید میشود مودال لوگ این باز و بقییه قسمت ها سیاه میشود
-let navbarLoginBtn = document.querySelector(".navbar-login-btn");
+let navbarLoginBtns = document.querySelectorAll(".navbar-login-btn");
 let loginModal = document.querySelector(".loginModal");
 let closeloginModalBtn = document.querySelector(".closeloginModalBtn");
-navbarLoginBtn.addEventListener("click", () => {
-  openloginModal();
+navbarLoginBtns.forEach((navbarLoginBtn) => {
+  navbarLoginBtn.addEventListener("click", () => {
+    openloginModal();
+  });
 });
 
 function openloginModal() {
   loginModal.classList.add("loginModalActive");
   makeBackgroundDarkWhenModulsOpean();
   closeModulSearch();
+  closeMenuModal()
 }
 closeloginModalBtn.addEventListener("click", () => {
   closeloginModal();
