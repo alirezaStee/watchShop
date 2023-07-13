@@ -272,7 +272,6 @@ function makeMainSlideProduct(product) {
         );
       },
       slideChange: function (e) {
-        console.log(e.visibleSlides[0].style);
         let findProductVisible = allData.products.find(
           (item) => item.id == e.visibleSlides[0].id
         );
@@ -292,7 +291,6 @@ function mainSlideChangeBackground(bgPrimery, bgsecondery, visibleSlides) {
   if (window.innerWidth >= 768) {
     visibleSlides.style.background = bgsecondery;
   } else {
-    console.log(bgPrimery);
     visibleSlides.style.background = bgPrimery;
   }
 }
