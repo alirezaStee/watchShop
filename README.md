@@ -11,7 +11,7 @@ Welcome to the Watch Shop repository! This project is a fully functional online 
 
 ## Demo
 
-You can check out a live demo of the Watch Shop project [here](https://alirezastee.github.io/firstpro/#).
+You can check out a live demo of the Watch Shop project [here](https://alirezastee.github.io/watchShop/).
 
 ![Demo Gif](demo-gif-url.gif)
 ## Screenshot
